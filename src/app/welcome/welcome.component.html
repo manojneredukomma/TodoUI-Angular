@@ -1,0 +1,12 @@
+<h1>Welcome</h1>
+<div class="container">
+    <div>Welcome {{name}} </div>
+    <div>Click <a routerLink="/todos"> here</a> to go to Todos page</div>
+</div>
+<div class="container">
+    Click here to get a customized message
+    <button (click)="getWelcomeMessageWithPathVariable(name)" class="btn btn-success">GetWelcomeMessage</button>
+</div>
+<div class="container" *ngIf="welcomeMessageFromService">
+    {{welcomeMessageFromService}}
+</div>
